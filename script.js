@@ -22,21 +22,18 @@ function squareRoot(number) {
     }
   }
   let srn = ((start + end) / 2).toFixed(5);
-  console.log(`srn: ${srn}`);
   return srn;
 }
-console.log(squareRoot(number.value));
 
 function calculate() {
   let numberValue = number.value;
-  if (numberValue == 1) return (result.innerHTML = numberValue);
+  if (numberValue == 1) return (result.innerHTML = 1);
   let resultValue = squareRoot(numberValue);
   if (isNaN(resultValue)) {
     resultValue = "there is no square root";
   }
 
   result.innerHTML = resultValue;
-  console.log(resultValue);
 }
 
 calculateBtn.addEventListener("click", calculate);

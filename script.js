@@ -25,13 +25,16 @@ function squareRoot(number) {
   console.log(`srn: ${srn}`);
   return srn;
 }
+console.log(squareRoot(number.value));
 
 function calculate() {
   let numberValue = number.value;
+  if (numberValue == 1) return (result.innerHTML = numberValue);
   let resultValue = squareRoot(numberValue);
   if (isNaN(resultValue)) {
     resultValue = "there is no square root";
   }
+
   result.innerHTML = resultValue;
   console.log(resultValue);
 }
